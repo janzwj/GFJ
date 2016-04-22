@@ -1,0 +1,117 @@
+.navigation {
+	BACKGROUND: url(../images/nav_bg.png) no-repeat -9999px -9999px
+}
+.navigation .nav-title {
+	BACKGROUND: url(../images/nav_bg.png) no-repeat -9999px -9999px
+}
+.navigation .nav-title:hover I {
+	BACKGROUND: url(../images/nav_bg.png) no-repeat -9999px -9999px
+}
+.navigation .selected {
+	BACKGROUND: url(../images/nav_bg.png) no-repeat -9999px -9999px
+}
+.navigation .selected I {
+	BACKGROUND: url(../images/nav_bg.png) no-repeat -9999px -9999px
+}
+.navigation-shadow {
+	BACKGROUND: url(../images/nav_bg.png) no-repeat -9999px -9999px
+}
+.navigation {
+	HEIGHT: 39px; BACKGROUND-REPEAT: repeat-x; POSITION: relative; BACKGROUND-POSITION: 0px -111px; TEXT-ALIGN: center; Z-INDEX: 500
+}
+.navigation .nav-box {
+	WIDTH: 950px; POSITION: relative; MARGIN: 0px auto; Z-INDEX: 510
+}
+.navigation UL {
+	POSITION: relative; Z-INDEX: 600
+}
+.navigation LI {
+	HEIGHT: 39px; FLOAT: left; Z-INDEX: 10
+}
+.floatleft {
+	FLOAT: left !important
+}
+.navigation .floatleft .nav-title {
+	HEIGHT: 36px; POSITION: relative; BACKGROUND-POSITION: -340px 2px; COLOR: #fff; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 15px; Z-INDEX: 10; DISPLAY: inline-block; PADDING-RIGHT: 15px
+}
+.nav-title-sytb {
+	HEIGHT: 39px; WIDTH: 20px; BACKGROUND: url(../images/sy_tb.gif) no-repeat; POSITION: absolute; FLOAT: left; MARGIN-LEFT: 10px; Z-INDEX: 1000; MARGIN-TOP: 1px
+}
+.navigation .floatleft .nav-title-fy {
+	FONT-SIZE: 12px; HEIGHT: 39px; FONT-WEIGHT: normal; COLOR: #fff; PADDING-BOTTOM: 0px; TEXT-ALIGN: center; PADDING-TOP: 1px; PADDING-LEFT: 8px; MARGIN-LEFT: 0px; Z-INDEX: 10; MARGIN-TOP: -1px; DISPLAY: inline-block; LINE-HEIGHT: 39px; PADDING-RIGHT: 8px; MARGIN-RIGHT: 0px
+}
+.nav_bg_line {
+	WIDTH: 1px; BACKGROUND: url(../images/nav_bg_line.gif) no-repeat
+}
+.nav-title-fy:link {
+	TEXT-DECORATION: none
+}
+.nav-title-fy:visited {
+	TEXT-DECORATION: none
+}
+.nav-title-fy:hover {
+	TEXT-DECORATION: none
+}
+.nav-title-fy:hover SPAN {
+	TEXT-DECORATION: none
+}
+.navigation .nav-first.nav-title {
+	BACKGROUND: none transparent scroll repeat 0% 0%
+}
+.nav-title:link {
+	TEXT-DECORATION: none
+}
+.nav-title:visited {
+	TEXT-DECORATION: none
+}
+.navigation .selected.nav-title {
+	BACKGROUND: url(../images/title_bg.png) repeat-x; Z-INDEX: 30 !important
+}
+.navigation .n-hover .nav-title {
+	BACKGROUND: url(../images/title_bg.png) repeat-x; Z-INDEX: 30 !important
+}
+.navigation .selected.nav-title {
+	TEXT-DECORATION: none !important; HEIGHT: 39px !important
+}
+.navigation .selected.nav-title SPAN {
+	CURSOR: pointer; TEXT-DECORATION: none !important
+}
+.navigation .nav-title-fy .selected_s {
+	BACKGROUND: url(../images/title_bg_d_s.png); TEXT-ALIGN: center; Z-INDEX: 20
+}
+.navigation .selected_s.nav-title-fy {
+	BACKGROUND: url(../images/title_bg_d_s.png); TEXT-ALIGN: center; Z-INDEX: 30 !important
+}
+.nav-title-fy .n-hover .nav-title-fy {
+	BACKGROUND: url(../images/title_bg_d_s.png); TEXT-ALIGN: center; Z-INDEX: 30 !important
+}
+.navigation .selected_s.nav-title-fy {
+	TEXT-DECORATION: none !important; HEIGHT: 39px !important; TEXT-ALIGN: center
+}
+.navigation .selected_s.nav-title-fy SPAN {
+	CURSOR: pointer; TEXT-DECORATION: none !important; TEXT-ALIGN: center
+}
+.navigation .selected_s.nav-title-fy SPAN {
+	PADDING-TOP: 10px
+}
+.navigation .n-hover DT .nav-title-fy SPAN {
+	PADDING-TOP: 10px
+}
+.navigation .nav-title SPAN {
+	CURSOR: pointer; FONT-SIZE: 14px; HEIGHT: 18px; PADDING-TOP: 10px; DISPLAY: inline-block; LINE-HEIGHT: 18px; _line-height: 17px
+}
+.navigation .nav-title-sj {
+	MARGIN-LEFT: 0px
+}
+.floatright {
+	FLOAT: right !important
+}
+.navigation .floatright .nav-title2 {
+	TEXT-DECORATION: none; HEIGHT: 39px; POSITION: relative; COLOR: #fff; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 8px; Z-INDEX: 10; DISPLAY: inline-block; LINE-HEIGHT: 39px; PADDING-RIGHT: 8px
+}
+.navigation .selected_s2.nav-title2 {
+	TEXT-DECORATION: none !important; HEIGHT: 39px !important; BACKGROUND: url(../images/title_bg_d_s.png) repeat-x
+}
+.navigation .selected_s2.nav-title2 SPAN {
+	CURSOR: pointer; TEXT-DECORATION: none !important
+}

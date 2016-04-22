@@ -1,0 +1,814 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link href="./css/daohang.css" rel="stylesheet" type="text/css">
+	<link href="./css/base.v20150930.css" rel="stylesheet" type="text/css">
+	<link href="./css/jquery-ui-1.8.16.custom.css" rel="stylesheet" type="text/css"/> 
+	<link href="./css/tm_fc.css" rel="stylesheet" type="text/css" />
+	<link href="./css/main.css" rel="stylesheet" type="text/css" />
+	<link href="./css/fc_help.css" rel="stylesheet" type="text/css" />
+	<link href="./css/pcdd_num.css" rel="stylesheet" type="text/css">
+
+	<link href="./css/style.css" rel="stylesheet" type="text/css">
+
+   	<script src="./js/jquery.min.2.0.0.js" type="text/javascript"></script>
+   	<script src="./js/bootstrap.min.3.0.3.js" type="text/javascript"></script>
+
+   	<script src="./js/makeconform.js" type="text/javascript"></script>
+
+   	<script src="./js/28play.js" type="text/javascript"></script>
+
+   	<script src="./js/jquery-1.6.2.min.js" type="text/javascript"></script>
+
+	<script src="./js/jquery-ui-1.8.16.custom.min.js" type="text/javascript"></script>
+
+    <script src="./js/AJax.js" type="text/javascript" language="javascript"></script>
+
+    <script src="./js/jquery-1.3.min.js" type="text/javascript"></script>
+
+    <script src="./js/cookie.js" type="text/javascript"></script>
+
+	<script src="./js/Head.js" type="text/javascript"></script>
+
+	<title>幸运28-PC蛋蛋</title>
+</head>
+<body id="bb_body" oncontextmenu="self.event.returnvalue=false">
+	<div class='div_full' id='parent_div' style="width:100%; display:none; left: 0px; top: 0px; filter:alpha(opacity=40); -moz-opacity:0.4; -khtml-opacity: 0.4; opacity: 0.4; "></div> 
+	<form id="form1" method="post"  target="hidefrm" action="pg28InsertDo.aspx" enctype="application/x-www-form-urlencoded" >
+        <input id="input_timeout" value="您已过投注截止期！" style="display:none;" />
+        <input id="LID" name="LID" type="hidden" value="800758" />
+        <input id="CTIME" name="CTIME" type="hidden" value="2016-04-20 14:20" />
+        <input class="input1" name="Cheat" type="hidden" value="CAE" style="width:20px" /> 
+        <input type="hidden" id="isdb_p" name="isdb_p" value="0"/>
+		<input class="input1" name="ALLSMONEY" id="ALLSMONEY" type="hidden" value="0" />
+	 	<input id="SMONEYSUM" class="input1" name="SMONEYSUM"  type="hidden" value="0"; />
+	    <input type="hidden" id="lastgain" name="lastgain" value="" />
+	    <input type="hidden" id="_issue" name="_issue" value="754830" />
+	    <iframe style="display:none; width: 248px; height: 9px;" name="hidefrm" id="hidefrm" src="" >
+		</iframe>
+
+		<div id="div_ad1" style="position: absolute; z-index: 122; width: 360px; height: auto;display: none;" class="popup">
+			<div class="container">
+				<div class="titleclose">
+					<span class="title">投注成功</span>
+					<a  onclick="return rm1();" class="close"><span>X</span></a>
+				</div>
+				<div class="content2" style="text-align:left;">
+					<div class="content_zc">
+						第<span  style="color :Red;">XXXXXXX</span>期投注成功！<br>
+						 &nbsp;&nbsp;&nbsp;&nbsp; 举手之劳，分享幸运28到微博，
+						 <a href="#" style="color:#515151;">获<span  style="color :Red;">百万</span>邀请奖励和
+						 	<span  style="color :Red;">50%</span>高额提成</a>。
+					</div>
+				</div>
+				<div class="btnpane_fx" style="text-align:right;">
+					<ul>
+						<li><a href="#"><img src="./images/fxdxl.gif" border="0"></a></li>
+						<li><a href="#"><img src="./images/fxdtx.gif" border="0"></a></li>
+						<li><a href="#"><img src="./images/zbfx.gif" border="0"></a></li>
+					</ul>
+				</div> 
+			</div>
+		</div>
+
+		<div  id="div_ad" style="position: absolute; z-index: 122; width: 360px; height: auto; display: none;" class="popup">
+			<div class="container">
+				<div  class="titleclose">
+					<span class="title">确认投注</span>
+					<a  onclick="return rm();" class="close"><span>X</span></a>
+				</div>
+				<div class="content1">你确认要投注？将扣除你
+					<span id="postgoldeggs" style="color :Red; font-weight:bold;">34,000</span>个金蛋！<br/>
+					<input type="checkbox" name="isdb" id="isdb" value="1" onclick="return ischecked()" style="margin-right:2px" />按当前投注模式与比例进行自动投注
+				</div>
+				<div class="btnpane">
+					<div style="float:left; ">
+						<img src="./images/popup_btn.png" alt="确定" onclick="return datapost()" style="cursor:pointer;"/>
+					</div> 
+					<div style="float:right;">
+						<img src="./images/popup_btn2.png" width="72" height="22"  alt="取消" onclick="return rm();"  style="cursor:pointer;"/>
+					</div>
+				</div>
+			</div>
+		</div>
+	<script type="text/javascript">
+	    //去除IE6背景缓存
+	    document.execCommand("BackgroundImageCache", false, true);
+
+	    function addfavorite(a, b) {
+	        if (document.all) {
+	            window.external.addFavorite('http://www.pceggs.com' + "", "PC蛋蛋-专业体验营销平台");
+	        } else if (window.sidebar) {
+	            window.sidebar.addPanel("PC蛋蛋-专业体验营销平台", 'http://www.pceggs.com' + "", "");
+	        }
+	    }
+	    function doSomething(evt) {
+	        var e = (evt) ? evt : window.event; //判断浏览器的类型，在基于ie内核的浏览器中的使用cancelBubble
+	        if (window.event) {
+	            e.cancelBubble = true;
+	        } else {
+	            //e.preventDefault(); //在基于firefox内核的浏览器中支持做法stopPropagation
+	            e.stopPropagation();
+	        }
+	    }
+
+	    function answerqenstion() {
+
+	        ShowMsgo.show("/activity/201209/dt/dtfc/fuceng/answer.aspx", 740, 610);
+
+	    }
+
+	    function closedd() {
+
+	        ShowMsgo.ok();
+	    }
+
+	    function closelinqu() {
+	        ShowMsgo.cancel();
+	        window.location.reload(true);
+	    }
+
+	    function aaddgame() {
+	        ShowMsgo.show("/Gain/new_guide_game.aspx", 658, 390);
+	    }
+	    function aaddgg() {
+	        ShowMsgo.show("/Gain/new_guide_gg.aspx", 658, 390);
+	    }
+	    var isgain = "1";
+	    var autoopen = "0";
+	    var registdays = "0";
+	    var userid = "25090146";
+
+
+	    var tohref = window.location.href;
+	    //if(tohref.indexOf("bbsPost.aspx")>-1||tohref.indexOf("bbsMain.aspx")>-1||tohref.indexOf("ShowList.aspx")>-1||tohref.indexOf("ShowInfo.aspx")>-1||tohref.indexOf("duobao_index.aspx")>-1||tohref.indexOf("duobao_next.aspx")>-1||tohref.indexOf("duobao_historylist.aspx")>-1||tohref.indexOf("bbsPostShow.aspx")>-1 ){
+
+	    $(window).bind("scroll", function () {
+	        var top_top = $(document).scrollTop(); //卷上去的高度
+	        if (top_top > 0) {
+	            $("#topNavUP").css("display", "");
+	        } else {
+	            $("#topNavUP").css("display", "none");
+	        }
+
+	    })
+
+	    // }
+	</script>
+
+<!--[if IE 6]>
+ <script type="text/javascript" src="./js/filter.js"></script>
+ <script type="text/javascript">
+ addPngStyle('.index_game3beta_ggw,index_prize3beta_prize_sj_main_m_fc,.nav-title,.nav-title-fy:hover,.selected_s,.header3beta_ggy.grzy_beta3_box_r_cj_jb,.grzy_beta3_box_r_db_jb');
+ DD_belatedPNG.fix(ewInitStyle.styles);
+ </script>
+ <![endif]-->
+<div class="index3beta_topFloat" id="topFloat" style="display: none">
+</div>
+<div id="top_hidden" style="height: 37px; display: none;">
+    &nbsp;</div>
+<a name="totop"></a>
+
+	<div class="navtop w100">
+		<div class="navtop-con w950 sheader_con clearfix">
+			<div class="floatleft sheader_conl">
+				<ul>
+					<li><a href="" class="sheader_img_phone" target="_blank">蛋蛋赚</a></li>
+                    <li class="sheader_line">&nbsp;</li>                    
+                    <li><a class="sheader_red" href="" onclick="doSomething(event);" style="color: #DB0100;">VIP会员</a></li>
+                    <li class="sheader_line">&nbsp;</li>                    
+                    <li><a href="" target="_parent" onclick="doSomething(event);">蛋友活动</a></li>
+                    <li class="sheader_line">&nbsp;</li>
+                    <li><a href="" target="_parent" onclick="doSomething(event);">客服中心</a></li>
+                    <li class="sheader_line">&nbsp;</li>
+                    <li><a href="#" onclick="addfavorite()">收藏</a></li>
+				</ul>
+			</div>
+			<div class="floatleft sheader_conr">
+				<ul>
+					<li>
+						<a href="" class="sheader_imgxx" style="background: url(./images/imgxx.gif)  left center no-repeat;">
+							<span class="sheader_red" style="font-weight: bolder">1</span>
+						</a>
+					</li>
+                    <li class="sheader_line">&nbsp;</li>
+                    <li>
+                    	<a href="" class="sheader_img_eggs">小金库：<span class="sheader_red" style="font-weight: bolder">0</span></a>
+                    </li>
+                    <li class="sheader_line">&nbsp;</li>
+                    <li>
+                    	<a href="" class="sheader_img_eggs">金蛋：<span class="sheader_red" style="font-weight: bolder">0</span></a>
+                    </li>
+                    <li class="sheader_line">&nbsp;</li>
+                    <li>
+                    	<a href="" class="sheader_img_jinbi">金币：<span class="sheader_red" style="font-weight: bolder">0</span></a>
+                    </li>
+                    <li class="sheader_line">&nbsp;</li>
+                    <li>
+                    	<a href="" class="sheader_red" style="color: #DB0100;">我的帐户</a>
+                    </li>
+                    <li class="sheader_line">&nbsp;</li>
+                    <li>ID：<a href="" class="sheader_blue" style="color: #3D72A4;">25090146
+                    </a><span style="color: #8b8b8b">[<a href="" style="color: #8b8b8b;">退出</a>]</span></li>
+
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	 <!--logo guanggaobg-->
+	<div class="header3beta_con">
+        <div class="header3beta_logo">
+            <a href="/"><img src="./images/pceggs_logo20160224.png" border="0" /></a>
+        </div>
+        <div class="header3beta_ggy" style="width: 302px;">
+            <div class="pcdd_number">
+                <input name="Head2$WithdrawCount" type="hidden" id="Head2_WithdrawCount" value="4165085" />
+                <b>累计提现兑换人次</b>
+                <ul id="ulTotalBuy">
+                    <li class="pcdd_num">4</li>
+                    <li class="pcdd_num">,</li>
+                    <li class="pcdd_num">1</li>
+                    <li class="pcdd_num">6</li>
+                    <li class="pcdd_num">5</li>
+                    <li class="pcdd_num">,</li>
+                    <li class="pcdd_num">0</li>
+                    <li class="pcdd_num">8</li>
+                    <li class="pcdd_num">5</li>
+                </ul>
+            </div>
+        </div>
+        <div style="width: 480px;" class="header3beta_banner">
+        	<a href="" target="_blank"><img src="./images/headers_topimg20160419.jpg"  style="width: 480px;height: 72px;" border="0"  /></a>
+        	<map name="Map" id="Map">
+                <area shape="poly" coords="206,34,346,34,326,73,184,73" href="/activity2014/201404/yxccc/201404_yxccc.aspx"
+                    target="_blank" />
+                <area shape="poly" coords="338,34,480,34,480,73,330,73" href="/activity2014/201404/tbfl/201404_tbfl.aspx"
+                    target="_blank" />
+            </map>
+        </div>
+    </div>
+
+	
+	 <!-- daohang -->
+
+	<div class="w100 navigation" style="text-align: left">
+		<div class="w950 nav-box clearfix">
+			<ul class="floatright">
+				<li><a href="" class="nav-title2" target="_parent"><span>晒奖</span></a></li>
+				<li class="a">&nbsp;</li>
+	            <li><a href="" class="nav-title2" target="_parent"><span>推广赚钱</span></a></li>
+	            <li class="a">&nbsp;</li>
+	            <li><a href="" class="nav-title2" target="_parent"><span>讨论区</span></a></li>
+	            <li class="a">&nbsp;</li>
+	            <li><a href="" class="nav-title2" target="_parent"><span>帮助</span></a></li>
+			</ul>
+			<ul class="floatleft" style="margin-top:-4px;">
+				<li><a href="/" class="nav-title nav-first" target="_parent"><span>&nbsp;&nbsp;&nbsp;首&nbsp;页</span></a></li>
+	            <li><a href="" class="nav-title" target="_parent"><span>新人活动</span></a></li>
+	            <li><a href="" class="nav-title" target="_parent"><span>游戏试玩</span></a></li>
+	            <li style="position: relative;"><a href="" class="nav-title" target="_parent"><span>玩棋牌</span></a> </li>
+	            <li><a href="" class="nav-title" target="_parent"><span>理财体验</span></a></li>
+	            <li><a href="" class="nav-title" target="_parent"><span>手机APP</span></a></li>
+	            <li><a href="" class="nav-title" target="_parent"><span>购物返利</span></a></li>
+	            <li><a href="" class="nav-title" target="_parent"><span>夺宝</span></a></li>
+	            <li><a href="" class="nav-title selected" target="_parent"><span>竞猜</span></a></li>
+	            <li><a href="" class="nav-title" target="_parent"><span>兑奖</span></a></li>
+			</ul>
+		</div>
+		
+	</div>
+
+	<div class="tgl_public_1118" style="display: block; margin-top: 10px;">
+	    <div class="tglxx_public_1118">
+	        <script>ShowWords_new()</script>
+	    </div>
+	    <div class="tgldt_public_1118" style="overflow: hidden;">	        
+	        <div id="demo">
+	            <div id="indemo">
+	                <div id="demo1"></div>
+	                <div id="demo2"></div>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+
+	<script>
+	    var FeedData = new Array({title:'蛋友<a href="">8830397</a>兑换了<a href="">"韩国现代QC-YZ157R 原汁机"</a>',userid:'8830397',datatype:'奖品',time:'4小时前',url:''},{title:'蛋友<a href="">3752470</a>兑换了<a href="">"飞科FS820电动剃须刀（黑色）"</a>',userid:'3752470',datatype:'奖品',time:'5小时前',url:''},{title:'蛋友<a href="">6092725</a>兑换了<a href="">"苏泊尔SS50Q1时尚琴音不锈钢水壶"</a>',userid:'6092725',datatype:'奖品',time:'5小时前',url:''},{title:'蛋友<a href="">1781680</a>兑换了<a href="">"苹果iPad Air （32GB  银色）"</a>',userid:'1781680',datatype:'奖品',time:'15小时前',url:''});
+	    var msg = "";
+	    var speed=40; //数字越大速度越慢 20
+	    var tab=document.getElementById("demo"); 
+	    var tab1=document.getElementById("demo1"); 
+	    var tab2=document.getElementById("demo2"); 
+	    var MyMar = null;
+	    function Marquee(){ 
+	        if(tab2.offsetWidth-tab.scrollLeft<=0) {
+	            tab.scrollLeft -= tab1.offsetWidth;
+	        }else{ 
+	            tab.scrollLeft++; 
+	        } 
+	    }
+	    
+	    tab.onmouseover=function() {clearInterval(MyMar)}; 
+	    tab.onmouseout=function() {MyMar=setInterval(Marquee,speed)}; 
+	    
+	    if(FeedData != null && FeedData.length > 0) {
+	        
+	        for(var i = 0; i < FeedData.length; i ++) {
+	                   msg += "<span>【" + FeedData[i].datatype + "】</span>" +FeedData[i].title+" " +FeedData[i].time + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+		    
+	        }
+	        MyMar=setInterval(Marquee,speed); 
+	    }
+	 
+	    tab1.innerHTML = msg;
+	    tab2.innerHTML = msg;
+	</script>
+	<script type="text/javascript">
+	    function closeTop(day) {
+	        document.getElementById("topFloat").style.display = "none";
+	        document.getElementById("top_hidden").style.display="none";
+	        SetCookie_top('dd_top_url', '1', day);
+	    }
+	    function SetCookie_top(name, value, day)
+	    {
+	        var exp = new Date();
+	        exp.setTime(exp.getTime() + parseInt(day) * 24 * 60 * 60 * 1000);
+	        document.cookie = name + "=" + escape(value) + ";expires=" + exp.toGMTString() + ";path=/;domain=pceggs.com";
+	    }
+	    function getCookie_top(name)//取cookies函数        
+	    {
+	        var arr = document.cookie.match(new RegExp("(^| )" + name + "=([^;]*)(;|$)"));
+	        if (arr != null) return unescape(arr[2]); return null;
+
+	    }
+	    function showSiteTop(i) {
+	        if (i < 70) {
+	            var hh = i - 70;
+	           // document.getElementById("topFloat").style.top = hh + "px";
+	            i = i + 1;
+	            setTimeout("showSiteTop(" + i + ")", 30);
+	        }
+	    }
+	    var mob_status = 0;
+	    //alert(vip_level);
+	    if(mob_status != 1){
+	        if (getCookie_top('dd_top_url') != 1) {
+	            //showSiteTop(0);
+	           // document.getElementById("topFloat").style.display = "";
+	            //document.getElementById("top_hidden").style.display="";
+	        }
+	    }
+	    function showSiteTop2(i) {
+	        if (i <= 22) {
+	            i++;
+	            setTimeout("showSiteTop2(" + i + ")", 50);
+	        }
+	    }
+
+	</script>
+	<script>
+
+	    function closeWX(i) {
+	        document.getElementById("pceggsmoblie" + i).style.display = "none";
+	    }
+
+	</script>
+	<script type="text/javascript" language="javascript">
+	    function closeMapCCC() {
+	        document.getElementById("201311yxccc").style.display = "none";
+	    }
+	    
+	 $(document).ready(function () {
+
+	    });
+	 
+	</script>
+	
+	<!-- content -->
+	<div class="content">
+		<div class="content_top" >&nbsp;</div>
+		<div class="content_middle" style="height:auto"  >
+			<script language="javascript" type="text/javascript">  
+				var cis="607.90,313.10,161.34,101.99,64.31,48.05,30.83,27.95,21.84,18.55,15.98,14.83,14.03,13.67,13.58,14.19,14.64,16.30,17.77,22.39,27.79,36.25,38.96,60.94,90.84,133.32,252.30,607.63";//上期赔率
+				var a_cis=cis.split(",");
+				var cis1="425.53,1124.23,4233.02,7231.36,5232.2352,3453.83,2458.41,1348.92,14449.75,16573.56,1569.01,156564.74,1658.13,1563.29,1569.50,1655.49894,1897.87,1126.51,1129.9339,1228.6110,2337.3446,2557.2651,45653.7762,56761.77,1608.69,16736.1678,3717.49,502.14";//本期赔率
+				var a_cis1=cis1.split(",");
+				var BeforePeriods="*"+"754825";//上期投注号
+				var Periods="800758"//本期ID
+				var arr1=",,,,,,,,,,,,,,,,,,,,,,,,,,,".split(",");//投注金蛋
+				var Issue="754830";//当期期号
+				var TSeconds="1140";//倒计时
+				var mypceggs="0";//我的金蛋数
+				var IsGetEggs="1";//是否可以清理获取
+				var StrTimeOut="0"
+				var LastIssue="";
+			</script>
+			<div style="width:948px">
+				<div class="title_game" style="float:left; width:430px;">
+				    <a href="/play/pgl.aspx"><img src="./images/ico_6.gif" width="98" height="27" border="0" /></a>
+				    <a href="/play/Pg310.aspx"><img src="./images/ico_26.gif" width="98" height="27" border="0" /></a> 
+					<a href="/play/mlyqp.aspx"><img src="./images/ico_0813.gif" width="98" height="27" border="0" /></a>
+					<a href="/play/qyqp.aspx"><img src="./images/ico_0814.gif" width="98" height="27" border="0" /></a>
+				</div>
+				<div style=" float:right; width:510px; height:25px;vertical-align:middle; line-height:25px;text-align:right"> 
+				只有PC蛋蛋帐号登录蛋蛋赚才能参与幸运28，请用你的PC蛋蛋帐号登录&nbsp;&nbsp;</div>
+			</div>
+			<div class="game_line"></div>
+			<table width="936" border="0" align="center" cellpadding="0" cellspacing="0"  bgcolor="#FCF8DA"  style="clear:both;">
+				<tr>
+					<td width="50%" height="24" align="left" valign="middle" style="padding-left:10px">
+						<a href="/play/pgMy28.aspx" target="_parent" class="abt12_1">我的投注</a> <span class="wh12"> | </span>
+						<a href="trend.html" target="_parent" class="abt12_1">走势</a> <span class="wh12">|</span>  
+						<a href="/play/Introduce_Lucky28.aspx"  class="abt12_1">
+							<img src="./images/new28.gif" alt=""/>&nbsp;幸运28介绍
+						</a><span class="wh12"> | </span>
+						<img src="./images/phone_tb.gif" width="13px" height="15"  alt=""/>
+						<a href="pg28wap.aspx" target="_parent" class="abt12_1">手机wap站</a> <span class="wh12"><span class="wh12"> |</span></span>
+						<a href="/play/Pgnrb.aspx" class="abt12_1">牛人榜</a>
+					</td>
+					<td width="50%" align="right" valign="middle" style="padding-right:10px">
+						<a href="javascript:ShowMsgo.show('/adcomate/pggetgoldeggsnew.aspx',503,300);" class="abt12_1">领取救济金</a><span class="wh12"> | </span> 
+						<a href="/play/pg28ModesEdit.aspx" target="_parent" class="abt12_1">投注模式编辑</a><span class="wh12"> |</span> 
+						<a href="/play/Autoplay.aspx" target="_parent" class="abt12_1">自动投注</a>
+					</td>
+				</tr>
+			</table>
+			<div style="margin:2px auto 10px auto; width:936px; line-height :25px" >
+				<div style="width:20%; float:left; line-height:30px; height:30px; padding-left:5px;">754825期开奖结果:
+					<img src="./images/number_15.gif" width="25" height="25" />
+				</div>
+				<div style="width:60%; text-align:center; border:1px; float :left; line-height:30px; height:30px; " id="RemainTitle"></div>
+			</div>
+			<div class="content">
+				<div class="border_out">
+					<div class="border_out_l">
+						<div class="border_out_title">
+							<span style="float:left;width:auto;">标准投注模式</span> <span style="float:right;width:auto;">
+							<a href="">标准模式说明</a></span>
+						</div>
+						<table  border="0" width="924" align="center">
+					        <tr>
+						        <td height="23" class="img_bt1" width="51" attr="0">全包</td>
+						        <td class="img_bt1" width="46" attr="1">单</td>
+						        <td class="img_bt1" width="46" attr="2">双</td>
+						        <td class="img_bt1" width="46" attr="3">大</td>
+						        <td class="img_bt1" width="46" attr="4">小</td>
+						        <td class="img_bt1" width="46" attr="5">中</td>
+						        <td class="img_bt1" width="46" attr="6">边</td>
+						        <td class="img_bt1" width="46" attr="7">大单</td>
+						        <td class="img_bt1" width="46" attr="8">小单</td>
+						        <td class="img_bt1" width="46" attr="9">大双</td>
+						        <td class="img_bt1" width="46" attr="10">小双</td>
+						        <td class="img_bt1" width="46" attr="11">大边</td>
+						        <td class="img_bt1" width="46" attr="12">小边</td>
+						        <td class="img_bt1" width="46" attr="13">单边</td>
+						        <td class="img_bt1" width="46" attr="14">双边</td>
+						        <td class="img_bt1" width="46" attr="15">0尾</td>
+						        <td class="img_bt1" width="46" attr="16">1尾</td>
+						        <td class="img_bt1" width="46" attr="17">2尾</td>
+						        <td class="img_bt1" width="46" attr="18">3尾</td>
+						        <td class="img_bt1" width="46" attr="19">4尾</td>
+					        </tr>
+					        <tr>
+					            <td height="23" class="img_bt1" width="46" attr="20">小尾</td>
+					            <td class="img_bt1" width="46" attr="21">5尾</td>
+					            <td class="img_bt1" width="46" attr="22">6尾</td>
+					            <td class="img_bt1" width="46" attr="23">7尾</td>
+					            <td class="img_bt1" width="46" attr="24">8尾</td>
+					            <td class="img_bt1" width="46" attr="25">9尾</td>
+					            <td class="img_bt1" width="46" attr="26">大尾</td>
+					            <td class="img_bt1" width="46" attr="27">3余0</td>
+					            <td class="img_bt1" width="46" attr="28">3余1</td>
+					            <td class="img_bt1" width="46" attr="29">3余2</td>
+					            <td class="img_bt1" width="46" attr="30">4余0</td>
+					            <td class="img_bt1" width="46" attr="31">4余1</td>
+					            <td class="img_bt1" width="46" attr="32">4余2</td>
+					            <td class="img_bt1" width="46" attr="33">4余3</td>
+					            <td class="img_bt1" width="46" attr="34">5余0</td>
+					            <td class="img_bt1" width="46" attr="35">5余1</td>
+					            <td class="img_bt1" width="46" attr="36">5余2</td>
+					            <td class="img_bt1" width="46" attr="37">5余3</td>
+						        <td class="img_bt1" width="46" attr="38">5余4</td>
+					        </tr>
+					    </table>
+					</div>
+				</div>
+				<div class="border_wg" id="stoptip" style="display:none;">为了保护您的投注安全，
+					<strong style="color:#ff0000; font-weight:bold;">您的投注已被暂停</strong>！
+					<span id="stopsubtip">您的账号要到
+						<strong style="color:#ff0000; font-weight:bold;">2012-2-14 12:12</strong>才能恢复投注。
+					</span><br/>
+				</div>
+				<div class="border_out1">
+					<div class="border_out1_l" id="border_out1_l">
+						<span>0.1倍</span><span>0.5倍</span><span>0.8倍</span>
+						<span>1.2倍</span><span>1.5倍</span><span>2倍</span>
+						<span>10倍</span><span>50倍</span><span>100倍</span>
+					</div>
+					<div class="border_out1_c">
+						<div style="float:left;width:76px;padding-left:16px;">总投注金蛋：</div>
+						<div style="color:#ff0000; font-weight:bold;width:90px;float:left; overflow:hidden" id="totalvalue"></div>
+						<div class="conform_btn"  onclick="comform()" id="conform_btn">确认投注</div>
+					</div>
+					<div class="border_out1_r">
+						<div class="touzhu1">刷新赔率</div>
+						<div class="touzhu1">上期投注</div>
+						<div class="touzhu2"> 反选</div>
+						<div class="touzhu2"> 清除</div>
+					</div>
+				</div>
+	  			<div class="content_middle" style="height:auto; width:934px;margin:auto;"  id="panel" >
+					<input class="input2" name="SMONEYY" type="hidden" value="ALD" /> 
+				    <table width="467" border="0" cellpadding="0" cellspacing="1" bgcolor="#FFB91F" align="left" style="color:Black;">
+				      <tr align="center" height="20">
+				        <td width="50"  background="./images/xy28_bg.gif" >号码</td>
+				        <td width="71"  background="./images/xy28_bg.gif">上期赔率</td>
+				        <td width="71"  background="./images/xy28_bg.gif">当前赔率</td>
+				        <td width="53"   background="./images/xy28_bg.gif">请选择</td>
+				        <td width="130"    background="./images/xy28_bg.gif">投注</td>
+				        <td width="80"   background="./images/xy28_bg.gif">倍数</td>
+				      </tr>
+				      <tr align="center" bgcolor="#FFFFFF" height="27">
+				        <td><img src="./images/number_0.gif" width="25" height="25"  /></td>
+				       <td> </td>
+				        <td> </td>
+				        <td><input type="checkbox" name="checkboxd" value="checkbox" /></td>
+				        <td><input type="text"   class="input2"  name="SMONEY" style="width:110px;ime-mode:disabled" id="txt0" onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))" maxlength="9" /></td>
+				        <td><input class="input3" name="Add" value=".5" type="button"/> <input class="input3" name="Add" value="2" type="button"/> <input class="input3" name="Add" value="10" type="button"/></td>
+				      </tr>
+				      <tr align="center" bgcolor="#FFFFFF" height="27">
+				        <td><img src="./images/number_1.gif" width="25" height="25" /></td>
+				        <td> </td>
+				         <td> </td>
+				        <td><input type="checkbox" name="checkboxd" value="checkbox" /></td>
+				        <td><input type="text"  class="input2"  name="SMONEY" style="width:110px;ime-mode:disabled" id="txt1" onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))" maxlength="9"/></td>
+				         <td><input class="input3" name="Add" value=".5" type="button"/> <input class="input3" name="Add" value="2" type="button"/> <input class="input3" name="Add" value="10" type="button"/></td>
+				      </tr>
+				      <tr align="center" bgcolor="#FFFFFF" height="27">
+				        <td><img src="./images/number_2.gif" width="25" height="25" /></td>
+				        <td> </td>
+				         <td> </td>
+				        <td><input type="checkbox" name="checkboxd" value="checkbox" /></td>
+				        <td><input type="text"  class="input2"  name="SMONEY" style="width:110px;ime-mode:disabled" id="txt2" onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))" maxlength="9" /></td>
+				         <td><input class="input3" name="Add" value=".5" type="button"/> <input class="input3" name="Add" value="2" type="button"/> <input class="input3" name="Add" value="10" type="button"/></td>
+				      </tr>
+				      <tr align="center" bgcolor="#FFFFFF" height="27">
+				        <td><img src="./images/number_3.gif" width="25" height="25" /></td>
+				      <td> </td>
+				          <td> </td>
+				        <td><input type="checkbox" name="checkboxd" value="checkbox" /></td>
+				        <td><input type="text"  class="input2"  name="SMONEY" style="width:110px;ime-mode:disabled" id="txt3" onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))" maxlength="9" /></td>
+				         <td><input class="input3" name="Add" value=".5" type="button"/> <input class="input3" name="Add" value="2" type="button"/> <input class="input3" name="Add" value="10" type="button"/></td>
+				      </tr>
+				      <tr align="center" bgcolor="#FFFFFF" height="27">
+				        <td><img src="./images/number_4.gif" width="25" height="25" /></td>
+				        <td> </td>
+				         <td> </td>
+				        <td><input type="checkbox" name="checkboxd" value="checkbox" /></td>
+				        <td><input type="text"  class="input2"  name="SMONEY" style="width:110px;ime-mode:disabled" id="txt4" onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))" maxlength="9" /></td>
+				         <td><input class="input3" name="Add" value=".5" type="button"/> <input class="input3" name="Add" value="2" type="button"/> <input class="input3" name="Add" value="10" type="button"/></td>
+				      </tr>
+
+				      <tr align="center" bgcolor="#FFFFFF" height="27">
+				        <td><img src="./images/number_5.gif" width="25" height="25" /></td>
+				       <td> </td>
+				          <td> </td>
+				        <td><input type="checkbox" name="checkboxd" value="checkbox" /></td>
+				        <td><input type="text"  class="input2"  name="SMONEY" style="width:110px;ime-mode:disabled" id="txt5" onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))" maxlength="9" /></td>
+				         <td><input class="input3" name="Add" value=".5" type="button"/> <input class="input3" name="Add" value="2" type="button"/> <input class="input3" name="Add" value="10" type="button"/></td>
+				      </tr>
+				      <tr align="center" bgcolor="#FFFFFF" height="27">
+				        <td><img src="./images/number_6.gif" width="25" height="25" /></td>
+				        <td> </td>
+				          <td> </td>
+				        <td><input type="checkbox" name="checkboxd" value="checkbox" /></td>
+				        <td><input type="text"  class="input2"  name="SMONEY" style="width:110px;ime-mode:disabled" id="txt6" onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))" maxlength="9"  /></td>
+				         <td><input class="input3" name="Add" value=".5" type="button"/> <input class="input3" name="Add" value="2" type="button"/> <input class="input3" name="Add" value="10" type="button"/></td>
+				      </tr>
+				      <tr align="center" bgcolor="#FFFFFF" height="27">
+				        <td><img src="./images/number_7.gif" width="25" height="25" /></td>
+				        <td> </td>
+				         <td> </td>
+				        <td><input type="checkbox" name="checkboxd" value="checkbox" /></td>
+				        <td><input type="text"  class="input2"  name="SMONEY" style="width:110px;ime-mode:disabled" id="txt7" onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))" maxlength="9" /></td>
+				         <td><input class="input3" name="Add" value=".5" type="button"/> <input class="input3" name="Add" value="2" type="button"/> <input class="input3" name="Add" value="10" type="button"/></td>
+				      </tr>
+				      <tr align="center" bgcolor="#FFFFFF" height="27">
+				        <td><img src="./images/number_8.gif" width="25" height="25" /></td>
+				       <td> </td>
+				       <td> </td>
+				        <td><input type="checkbox" name="checkboxd" value="checkbox" /></td>
+				        <td><input type="text"  class="input2"  name="SMONEY" style="width:110px;ime-mode:disabled" id="txt8" onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))" maxlength="9" /></td>
+				         <td><input class="input3" name="Add" value=".5" type="button"/> <input class="input3" name="Add" value="2" type="button"/> <input class="input3" name="Add" value="10" type="button"/></td>
+				      </tr>
+				      <tr align="center" bgcolor="#FFFFFF" height="27">
+				        <td><img src="./images/number_9.gif" width="25" height="25" /></td>
+				        <td> </td>
+				          <td> </td>
+				        <td><input type="checkbox" name="checkboxd" value="checkbox" /></td>
+				        <td><input type="text"  class="input2"  name="SMONEY" style="width:110px;ime-mode:disabled" id="txt9" onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))" maxlength="9" /></td>
+				         <td><input class="input3" name="Add" value=".5" type="button"/> <input class="input3" name="Add" value="2" type="button"/> <input class="input3" name="Add" value="10" type="button"/></td>
+				      </tr>
+				      <tr align="center" bgcolor="#FFFFFF" height="27">
+				        <td><img src="./images/number_10.gif" width="25" height="25" /></td>
+				        <td> </td>
+				          <td> </td>
+				        <td><input type="checkbox" name="checkboxd" value="checkbox" /></td>
+				        <td><input type="text"  class="input2"  name="SMONEY" style="width:110px;ime-mode:disabled" id="txt10" onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))" maxlength="9" /></td>
+				        <td><input class="input3" name="Add" value=".5" type="button"/> <input class="input3" name="Add" value="2" type="button"/> <input class="input3" name="Add" value="10" type="button"/></td>
+				      </tr>
+				      <tr align="center" bgcolor="#FFFFFF" height="27">
+				        <td><img src="./images/number_11.gif" width="25" height="25" /></td>
+				       <td> </td>
+				          <td> </td>
+				        <td><input type="checkbox" name="checkboxd" value="checkbox" /></td>
+				        <td><input type="text"  class="input2"  name="SMONEY" style="width:110px;ime-mode:disabled" id="txt11" onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))" maxlength="9" /></td>
+				         <td><input class="input3" name="Add" value=".5" type="button"/> <input class="input3" name="Add" value="2" type="button"/> <input class="input3" name="Add" value="10" type="button"/></td>
+				      </tr>
+				      <tr align="center" bgcolor="#FFFFFF" height="27">
+				        <td><img src="./images/number_12.gif" width="25" height="25" /></td>
+				        <td> </td>
+				          <td> </td>
+				        <td><input type="checkbox" name="checkboxd" value="checkbox" /></td>
+				        <td><input type="text"  class="input2"  name="SMONEY" style="width:110px;ime-mode:disabled"id="txt12" onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))" maxlength="9" /></td>
+				         <td><input class="input3" name="Add" value=".5" type="button"/> <input class="input3" name="Add" value="2" type="button"/> <input class="input3" name="Add" value="10" type="button"/></td>
+				      </tr>
+				      <tr align="center" bgcolor="#FFFFFF" height="27">
+				        <td><img src="./images/number_13.gif" width="25" height="25" /></td>
+				        <td> </td>
+				         <td> </td>
+				        <td><input type="checkbox" name="checkboxd" value="checkbox" /></td>
+				        <td><input type="text"  class="input2"  name="SMONEY" style="width:110px;ime-mode:disabled" id="txt13" onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))" maxlength="9" /></td>
+				         <td><input class="input3" name="Add" value=".5" type="button"/> <input class="input3" name="Add" value="2" type="button"/> <input class="input3" name="Add" value="10" type="button"/></td>
+				      </tr>
+				    </table>
+					<table width="467" border="0" cellpadding="0" cellspacing="1" bgcolor="#FFB91F" align="right" style="color:Black;" >
+				      <tr align="center" height="20">
+				        <td width="50"   background="./images/xy28_bg.gif">号码</td>
+				        <td  background="./images/xy28_bg.gif">上期赔率</td>
+				        <td  background="./images/xy28_bg.gif">当前赔率</td>
+				        <td   background="./images/xy28_bg.gif">请选择</td>
+				        <td width="130"    background="./images/xy28_bg.gif">投注</td>
+				        <td   background="./images/xy28_bg.gif" style="width: 80px">倍数</td>
+				      </tr>
+				      <tr align="center" bgcolor="#FFFFFF" height="27">
+				        <td><img src="./images/number_27.gif" width="25" height="25" /></td>
+				        <td> </td><td> </td>
+				        <td><input type="checkbox" name="checkboxd" value="checkbox" /></td>
+				        <td><input type="text"  class="input2"  name="SMONEY" style="width:110px;ime-mode:disabled" id="txt27" onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))" maxlength="9" /></td>
+				        <td style="width: 80px"><input class="input3" name="Add" value=".5" type="button"/> <input class="input3" name="Add" value="2" type="button"/> <input class="input3" name="Add" value="10" type="button"/></td>
+				      </tr>
+				      <tr align="center" bgcolor="#FFFFFF" height="27">
+				        <td><img src="./images/number_26.gif" width="25" height="25" /></td>
+				      	<td> </td><td> </td>
+				        <td><input type="checkbox" name="checkboxd" value="checkbox" />        </td>
+				        <td><input type="text"  class="input2"  name="SMONEY" style="width:110px;ime-mode:disabled" id="txt26" onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))" maxlength="9" /></td>
+				        <td style="width: 80px"><input class="input3" name="Add" value=".5" type="button"/> <input class="input3" name="Add" value="2" type="button"/> <input class="input3" name="Add" value="10" type="button"/></td>
+				      </tr>
+				      <tr align="center" bgcolor="#FFFFFF" height="27">
+				        <td><img src="./images/number_25.gif" width="25" height="25" /></td>
+				        <td> </td><td> </td>
+				        <td><input type="checkbox" name="checkboxd" value="checkbox" />        </td>
+				        <td><input type="text"  class="input2"  name="SMONEY" style="width:110px;ime-mode:disabled" id="txt25" onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))" maxlength="9" /></td>
+				        <td style="width: 80px"><input class="input3" name="Add" value=".5" type="button"/> <input class="input3" name="Add" value="2" type="button"/> <input class="input3" name="Add" value="10" type="button"/></td>
+				      </tr>
+				 	  <tr align="center" bgcolor="#FFFFFF" height="27">
+				        <td><img src="./images/number_24.gif" width="25" height="25" /></td>
+				        <td> </td><td> </td>
+				        <td><input type="checkbox" name="checkboxd" value="checkbox" />        </td>
+				        <td><input type="text"  class="input2"  name="SMONEY" style="width:110px;ime-mode:disabled" id="txt24" onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))" maxlength="9" /></td>
+				         <td style="width: 80px"><input class="input3" name="Add" value=".5" type="button"/> <input class="input3" name="Add" value="2" type="button"/> <input class="input3" name="Add" value="10" type="button"/></td>
+				      </tr>
+				      <tr align="center" bgcolor="#FFFFFF" height="27">
+				        <td><img src="./images/number_23.gif" width="25" height="25" /></td>
+				        <td> </td><td> </td>
+				        <td><input type="checkbox" name="checkboxd" value="checkbox" />        </td>
+				        <td><input type="text"  class="input2"  name="SMONEY" style="width:110px;ime-mode:disabled" id="txt23" onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))" maxlength="9" /></td>
+				         <td style="width: 80px"><input class="input3" name="Add" value=".5" type="button"/> <input class="input3" name="Add" value="2" type="button"/> <input class="input3" name="Add" value="10" type="button"/></td>
+				      </tr>
+				      <tr align="center" bgcolor="#FFFFFF" height="27">
+				        <td><img src="./images/number_22.gif" width="25" height="25" /></td>
+				        <td> </td><td> </td>
+				        <td><input type="checkbox" name="checkboxd" value="checkbox" />        </td>
+				        <td><input type="text"  class="input2"  name="SMONEY" style="width:110px;ime-mode:disabled" id="txt22" onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))" maxlength="9" /></td>
+				        <td style="width: 80px"><input class="input3" name="Add" value=".5" type="button"/> <input class="input3" name="Add" value="2" type="button"/> <input class="input3" name="Add" value="10" type="button"/></td>
+				      </tr>
+				      <tr align="center" bgcolor="#FFFFFF" height="27">
+				        <td><img src="./images/number_21.gif" width="25" height="25" /></td>
+				        <td> </td><td> </td>
+				        <td><input type="checkbox" name="checkboxd" value="checkbox" />        </td>
+				        <td><input type="text"  class="input2"  name="SMONEY" style="width:110px;ime-mode:disabled" id="txt21" onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))" maxlength="9" /></td>
+				        <td style="width: 80px"><input class="input3" name="Add" value=".5" type="button"/> <input class="input3" name="Add" value="2" type="button"/> <input class="input3" name="Add" value="10" type="button"/></td>
+				      </tr>
+				      <tr align="center" bgcolor="#FFFFFF" height="27">
+				        <td><img src="./images/number_20.gif" width="25" height="25" /></td>
+				        <td> </td><td> </td>
+				        <td><input type="checkbox" name="checkboxd" value="checkbox" />        </td>
+				        <td><input type="text"  class="input2"  name="SMONEY" style="width:110px;ime-mode:disabled" id="txt20" onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))" maxlength="9" /></td>
+				        <td style="width: 80px"><input class="input3" name="Add" value=".5" type="button"/> <input class="input3" name="Add" value="2" type="button"/> <input class="input3" name="Add" value="10" type="button"/></td>
+				      </tr>
+				      <tr align="center" bgcolor="#FFFFFF" height="27">
+				        <td><img src="./images/number_19.gif" width="25" height="25" /></td>
+				        <td> </td><td> </td>
+				        <td><input type="checkbox" name="checkboxd" value="checkbox" />        </td>
+				        <td><input type="text"  class="input2"  name="SMONEY" style="width:110px;ime-mode:disabled" id="txt19" onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))" maxlength="9" /></td>
+				        <td style="width: 80px"><input class="input3" name="Add" value=".5" type="button"/> <input class="input3" name="Add" value="2" type="button"/> <input class="input3" name="Add" value="10" type="button"/></td>
+				      </tr>
+				      <tr align="center" bgcolor="#FFFFFF" height="27">
+				        <td><img src="./images/number_18.gif" width="25" height="25" /></td>
+				       <td> </td><td> </td>
+				        <td><input type="checkbox" name="checkboxd" value="checkbox" />        </td>
+				        <td><input type="text"  class="input2"  name="SMONEY" style="width:110px;ime-mode:disabled"  id="txt18" onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))" maxlength="9" /></td>
+				         <td style="width: 80px"><input class="input3" name="Add" value=".5" type="button"/> <input class="input3" name="Add" value="2" type="button"/> <input class="input3" name="Add" value="10" type="button"/></td>
+				      </tr>
+				      <tr align="center" bgcolor="#FFFFFF" height="27">
+				        <td><img src="./images/number_17.gif" width="25" height="25" /></td>
+				        <td> </td><td> </td>
+				        <td><input type="checkbox" name="checkboxd" value="checkbox" />        </td>
+				        <td><input type="text"  class="input2"  name="SMONEY" style="width:110px;ime-mode:disabled" id="txt17" onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))" maxlength="9" /></td>
+				        <td style="width: 80px"><input class="input3" name="Add" value=".5" type="button"/> <input class="input3" name="Add" value="2" type="button"/> <input class="input3" name="Add" value="10" type="button"/></td>
+				      </tr>
+				      <tr align="center" bgcolor="#FFFFFF" height="27">
+				        <td><img src="./images/number_16.gif" width="25" height="25" /></td>
+				        <td> </td><td> </td>
+				        <td><input type="checkbox" name="checkboxd" value="checkbox" /></td>
+				        <td><input type="text"  class="input2"  name="SMONEY" style="width:110px;ime-mode:disabled" id="txt16" onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))" maxlength="9" /></td>
+				         <td style="width: 80px"><input class="input3" name="Add" value=".5" type="button"/> <input class="input3" name="Add" value="2" type="button"/> <input class="input3" name="Add" value="10" type="button"/></td>
+				      </tr>
+				      <tr align="center" bgcolor="#FFFFFF" height="27">
+				        <td><img src="./images/number_15.gif" width="25" height="25" /></td>
+				        <td> </td><td> </td>
+				        <td><input type="checkbox" name="checkboxd" value="checkbox" />        </td>
+				        <td><input type="text"  class="input2"  name="SMONEY" style="width:110px;ime-mode:disabled" id="txt15" onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))" maxlength="9" /></td>
+				         <td style="width: 80px"><input class="input3" name="Add" value=".5" type="button"/> <input class="input3" name="Add" value="2" type="button"/> <input class="input3" name="Add" value="10" type="button"/></td>
+				      </tr>
+				      <tr align="center" bgcolor="#FFFFFF" height="27">
+				        <td><img src="./images/number_14.gif" width="25" height="25" /></td>
+				        <td> </td><td> </td>
+				        <td><input type="checkbox" name="checkboxd" value="checkbox" />        </td>
+				        <td><input type="text"  class="input2"  name="SMONEY" style="width:110px;ime-mode:disabled" id="txt14" onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))"/></td>
+				         <td style="width: 80px"><input class="input3" name="Add" value=".5" type="button"/> <input class="input3" name="Add" value="2" type="button"/> <input class="input3" name="Add" value="10" type="button"/></td>
+				      </tr> 
+				    </table>
+				</div>
+			</div>
+		</div>
+		<div class="content_bottom">&nbsp;</div>
+	</div>
+	<div class="help_show" id="help_show" style="display:none;">
+		<div class="show_kj kjauto1" style="width:44px;height:16px;cursor:pointer;" id="kjauto1"></div>
+	  	<p class="hand" style="left:10px;"></p> 
+	  	<div class="show_tips tips1"  style="width:200px;left:42px;top:40px;">
+		  	<div class="t_zone">第二步、先用“全包”模式投注。“全包”即对28个号码全部投注；此模式输赢比较小，适合像您这样的新玩家。</div>
+      	</div>
+    </div>
+    <div class="help_show" id="help_show1" style="display:none;">
+    	<div class="show_kj kjauto1" style="width:76px;height:22px;cursor:pointer;" id="kjauto2" onclick="comform()"></div>
+		<p class="hand"></p> 
+		<div class="show_tips tips1" style="width:180px;">
+			<div class="t_zone">第三步、点此确认你的投注。</div>
+	    </div>
+	</div>
+
+	<!-- footer -->
+<div class="footer_larger">
+   <div class="footer" style="width:780px;">
+<!---
+	 
+<div  id="totopNava1">
+   
+<script charset='utf-8' type='text/javascript' src='http://wpa.b.qq.com/cgi/wpa.php?key=XzgwMDAxMzE1NF8yMzc5MzRfODAwMDEzMTU0Xw'></script>
+      
+</div>- -->
+<div>
+<div class="footer_left"  style="  width:200px;"><a href="http://www.idinfo.cn/SignHandle?userID=3301972003000443" target="_blank"><img src="./images/gs.gif" width="55" height="56" /></a>
+<a    key ="553dfdde58725379d18ae5b8"  logo_size="124x47"  logo_type="business"  href="http://www.anquan.org" ><script src="./js/aq_auth.js"></script></a>
+</div>
+<div class="footer_center">
+  
+  <p><a href="http://www.pceggs.com/pchome/pc_home.aspx" class="footer-a">关于PC蛋蛋</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://www.pceggs.com/help/h.aspx?id=11" class="footer-a">服务条款</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/newggfw/gg_index.html" class="footer-a">广告服务</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/newggfw/gg_hzkh.html" class="footer-a">合作商家</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/pchome/pc_home.aspx" class="footer-a">蛋友生活</a></p>
+  <p   > <a href="http://www.miibeian.gov.cn/" target="_blank" class="footer-a">ICP证：浙B2-20090227</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;浙网文[2016]0139-039号</p>
+  <p> Copyright 2006-2016，版权所有pceggs.com </p>
+</div>
+<div class="footer_right"><a  href="http://www.pingpinganan.gov.cn/web/index.aspx" target="_blank"><img src="./images/picend.gif" border="0" /></a>
+
+</div>
+</div>
+<div style="display:none"> 
+</div></div></div>
+
+</div>
+    </form>
+ <span style="background-color:White;color:White">
+ FROM MC:15:24:58
+ </span>
+
+
+
+
+
+
+</body>
+</html>

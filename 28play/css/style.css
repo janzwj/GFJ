@@ -1,0 +1,188 @@
+
+
+.clear{
+  clear:both;
+  height:0px;
+  font-size:0;
+}
+.clearfix:before,.clearfix:after{
+  display:table;content: " ";}
+.clearfix:after{clear: both;}
+.w100{width:100%;}
+.w950{width:950px;margin:0 auto;}
+.tab-td2818>tr>td{width:28px;height:18px;}
+.font-red{color:#DB0100;}
+.a{
+	background: url(../images/title_bg_d.png) center right no-repeat; 
+	width: 1px; 
+	font-size: 0px; 
+	line-height: 0px;
+	}
+/*  content */
+.form_game {
+	font-family: "宋体", Arial;
+	font-size: 14px;
+	text-align: center;
+	width: 100%;
+	color: #FF0000;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+		border-top-color: #FFFFFF;
+	border-right-color: #FFFFFF;
+	border-bottom-color: #FFFFFF;
+	border-left-color: #FFFFFF;
+}
+#div_p1
+    {
+        z-index:999999;
+        position:absolute; 
+
+    }
+.fc_kj{width: 650px; height: auto;}
+.fc_kj .titleclose {padding:1px 0 0 10px;height:44px; background: url(../images/lqjjj_fcbg.gif) no-repeat; text-align:left; }
+.fc_kj .title {font-size:12px;font-weight:bold;color:#FFF;line-height:23px;border:0px;}
+.fc_kj .close {position:absolute;right:4px;top:2px;width:45px;height:23px;background:url(../images/fc_kj_close.png) no-repeat 50% 50%;cursor:pointer}
+.fc_kj .close span {display:none;}
+
+
+.fc_kj .content_word {width:472px; margin:0 auto; text-align:left; height:190px; line-height:24px; font-size:14px;}
+
+.xy2820131227{width:934px; height:46px; border:1px solid #ffb91f; margin:0 auto;margin-bottom:2px;}
+.xy2820131227_l{width:466px; border-right:1px solid #ffb91f; height:46px; text-align:center; font-size:12px; line-height:46px; color:#000; float:left;_padding-top:16px;_height:32px; }
+.xy2820131227_r{width:466px; height:46px; text-align:center; font-size:12px; line-height:46px; color:#000; float:right;_padding-top:12px;_height:32px; }
+.xy2820131227_r a{ text-decoration:none; color:#000;}
+
+/* play  */
+.div_ad
+    {
+        z-index:102;
+        position:absolute;
+    }
+
+.input3
+{
+    border: solid 1px #aaa;
+    background: #fff;
+    color: #000;
+    height: 20px;
+     width:22px;
+cursor:pointer
+}
+
+.popup{width:340px;height:auto;background:#fff;border:1px solid #C40000;}
+.popup .titleclose {padding:1px 0 0 10px;height:44px; background:url(../images/xy28tz_fcbg.gif) no-repeat; }
+.popup .title {font-size:12px;font-weight:bold;color:#FFF;line-height:23px;border:0px;}
+.popup .close {position:absolute;right:4px;top:1px;width:55px;height:23px;cursor:pointer}
+.popup .close span {display:none;}
+.popup .content1 {padding:20px; padding-top:10px;min-height:26px;_height:26px;text-align:center;line-height:26px; font-size:12px;}
+.popup .btnpane { margin:0 auto;width:168px;margin-bottom:15px;height:22px; margin-left:100px;}
+
+
+.popup .content2 {padding-left:15px; padding-right:0px;padding-bottom:8px;padding-top:0px;min-height:26px;_height:26px;text-align:center;line-height:26px; font-size:12px;}
+
+.popup .btnpane_fx {margin:0 auto;width:340px;padding-bottom:8px;height:22px; font-size:12px;height:32px;}
+.popup .btnpane_fx ul li{ list-style:none; float:left; width:98px;}
+.popup .btnpane_zcwz {margin:0 auto;width:226px;padding-bottom:10px;height:22px; margin-left:120px; font-size:12px;height:32px;}
+
+
+
+.help_show{ position:absolute;top:500px;left:900px;}
+.show_kj{border:4px #FB0301 solid;}
+.kjauto1{ width:100px; height:50px;}
+
+.hand{
+	position:relative;
+	width:59px;
+	height:54px;
+	background: url(../images/hand.gif) no-repeat;
+	cursor:pointer;
+	top:-10px;
+	left:30px;
+}
+
+.show_tips{position:absolute;border:1px solid #EBA100;background: url(../images/help_fc_bg.gif) no-repeat left top;width:437px; font-size:12px;z-index:9999;}
+.show_tips .t_zone{padding:10px;line-height:21px;}
+.tips1{left:70px;top:50px;width:120px;}
+
+.blue_load_l:link {
+	color:#3B5888;
+	text-decoration:underline;
+}
+.blue_load_l:visited {
+	text-decoration:underline;
+	color:#3B5888;
+}
+.blue_load_l:hover {
+	text-decoration:underline;
+	color:#3B5888;
+}
+.blue_load_l:active {
+	text-decoration:underline;
+	color:#3B5888;
+}
+
+/*new0504*/
+.tips2{left:65px;top:75px;*left:70px;*top:80px;width:300px;}
+.gb_an{float:right; margin-top:3px; margin-right:2px;}
+
+
+/* 走势  trend */
+.qihao{font-size: 12px;}
+.shijian{font-size: 12px;}
+.jieguo{font-size:12px;}
+.qihao span{color:#FF0000; font-size:14px;}
+.bian{color:#FFFFFF;background-color:#3333FF;}
+.zhong{color:#FFFFFF;background-color:#FF0000;}
+.dan{font-size: 12px;background-color:#EA2640; color:#FFFFFF;}
+.shuang{font-size: 12px;background-color:#663399; color:#FFFFFF;}
+.da{font-size: 12px;background-color:#FF8040; color:#FFFFFF;}
+.xiao{font-size: 12px;background-color:#FF00FF; color:#FFFFFF;} 
+.sz_top{font-size: 12px; }
+.xz{background-color:#EA2640; color:#FFFFFF;}
+.dz{background-color:#6655AA; color:#FFFFFF;}
+.ico_eggs{padding:4px;background:url(../images/eggs.gif) left center no-repeat;}
+
+
+/*   ----------    */
+ .bottomeall{
+    position: fixed;
+    bottom: 0px;
+    height: 85px;
+    width: 100%;
+    background: url(../images/bg.png) repeat-x;
+    text-align: center;
+    z-index: 999999;
+    left: 0px;
+}
+.xx{
+    position: absolute;
+    right: 0px;
+}
+
+/*  -----------  */
+#demo{
+    overflow: hidden;
+    white-space: nowrap;
+    width: 492px;
+}
+#indemo{
+    float: left;
+    width: 800%;
+}
+#demo1, #demo2{
+    float: left;
+}
+
+
+#totopNava {
+width: 106px;
+z-index: 999998;                                                     /*设置浮动层次*/
+position: fixed;
+bottom: 15px;
+margin-left:965px;                                                /* 其他浏览器下定位，在这里可设置坐标*/
+_position: absolute;                                       /*IE6 用absolute模拟fixed*/
+_top: expression(documentElement.scrollTop + documentElement.clientHeight-560 + "px"); /*IE6 动态设置top位置*/
+/* documentElement.scrollTop 设置浮动元素始终在浏览器最顶，可以加一个数值达到排版效果 */
+height: auto;
